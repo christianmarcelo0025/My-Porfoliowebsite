@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Marcelo — Design & Creative Development</title>
+  <meta name="description" content="Portfolio of Marcelo — Digital Designer & Creative Developer specializing in minimalist systems, editorial interfaces, and robust software architecture.">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Ambient Grain Overlay -->
+  <div class="noise-overlay" aria-hidden="true"></div>
+
+  <!-- Interactive Custom Cursor -->
+  <div class="custom-cursor" id="customCursor" aria-hidden="true"></div>
+  <div class="cursor-follower" id="cursorFollower" aria-hidden="true"></div>
+
+  <!-- Header / Navigation -->
+  <header class="site-header" id="header">
+    <div class="header-inner container">
+      <a href="#hero" class="brand-logo" aria-label="Marcelo Home">
+        <span class="logo-mark">M.</span>
+        <span class="logo-text">MARCELO</span>
+      </a>
+
+      <div class="header-status">
+        <span class="status-dot"></span>
+        <span class="status-label">AVAILABLE FOR NEW PROJECTS</span>
+      </div>
+
+      <nav class="site-nav" aria-label="Primary Navigation">
+        <ul class="nav-list">
+          <li><a href="#work" class="nav-link"><span class="nav-index">01</span>Works</a></li>
+          <li><a href="#about" class="nav-link"><span class="nav-index">02</span>About</a></li>
+          <li><a href="#experience" class="nav-link"><span class="nav-index">03</span>Trajectory</a></li>
+          <li><a href="#writing" class="nav-link"><span class="nav-index">04</span>Notes</a></li>
+          <li><a href="#contact" class="nav-link"><span class="nav-index">05</span>Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-controls">
+        <button id="themeToggle" class="btn-icon theme-toggle" aria-label="Toggle monochrome color theme" title="Toggle Theme">
+          <svg class="icon sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75">
+            <circle cx="12" cy="12" r="4"></circle>
+            <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path>
+          </svg>
+          <svg class="icon moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle mobile menu" aria-expanded="false">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Drawer -->
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <div class="mobile-menu-inner container">
+      <ul class="mobile-nav-list">
+        <li><a href="#work" class="mobile-nav-link"><span class="nav-index">01</span> Selected Works</a></li>
+        <li><a href="#about" class="mobile-nav-link"><span class="nav-index">02</span> Philosophy & Bio</a></li>
+        <li><a href="#experience" class="mobile-nav-link"><span class="nav-index">03</span> Career Trajectory</a></li>
+        <li><a href="#writing" class="mobile-nav-link"><span class="nav-index">04</span> Published Notes</a></li>
+        <li><a href="#contact" class="mobile-nav-link"><span class="nav-index">05</span> Start a Project</a></li>
+      </ul>
+      <div class="mobile-menu-footer">
+        <div class="mono-meta">STATUS: AVAILABLE // 2026 EDITION</div>
+        <div class="mono-meta" id="mobileClock">TIME: --:--:--</div>
+      </div>
+    </div>
+  </div>
+
+  <main id="mainContent">
+    <!-- Hero Section -->
+    <section class="section-hero" id="hero">
+      <div class="container hero-container">
+        <div class="hero-meta-bar">
+          <span class="meta-tag">[ PORTFOLIO & ARCHIVE ]</span>
+          <span class="meta-tag hero-clock" id="heroClock">UTC+08:00 — 00:00:00</span>
+          <span class="meta-tag">[ INDEX NO. 26 ]</span>
+        </div>
+
+        <div class="hero-headline-wrap">
+          <p class="hero-pretitle">CREATIVE ENGINEERING & DIGITAL ARCHITECTURE</p>
+          <h1 class="hero-title">
+            <span>Crafting quiet,</span>
+            <span class="title-emphasis">monochrome</span>
+            <span>digital systems.</span>
+          </h1>
+        </div>
+
+        <div class="hero-bottom-grid">
+          <div class="hero-description">
+            <p>
+              I am Marcelo, an independent designer and engineer focusing on minimalist digital product interfaces, high-performance web systems, and brand typography. I believe clarity is the ultimate form of sophistication.
+            </p>
+            <div class="hero-disciplines">
+              <span class="discipline-pill">Interface Design</span>
+              <span class="discipline-pill">Full-Stack Architecture</span>
+              <span class="discipline-pill">Design Systems</span>
+              <span class="discipline-pill">Creative Direction</span>
+            </div>
+          </div>
+
+          <div class="hero-actions">
+            <a href="#work" class="btn btn-primary">
+              <span>EXPLORE SELECTED WORK</span>
+              <svg class="btn-arrow" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M3 8h10M9 4l4 4-4 4"/>
+              </svg>
+            </a>
+            <a href="#contact" class="btn btn-secondary">
+              <span>GET IN TOUCH</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Micro Coordinates Ticker -->
+        <div class="hero-footer-strip">
+          <div class="strip-item"><span>COORDINATES:</span> 35°41'22"N 139°41'30"E</div>
+          <div class="strip-item"><span>FOCUS:</span> SCALABLE DESIGN INFRASTRUCTURE</div>
+          <div class="strip-item"><span>PHILOSOPHY:</span> FORM FOLLOWS ESSENCE</div>
+          <div class="strip-item"><a href="#work" class="scroll-indicator">SCROLL TO DISCOVER ↓</a></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Selected Works Section -->
+    <section class="section-work" id="work">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-title-wrap">
+            <span class="section-index">01 // WORKS</span>
+            <h2 class="section-title">Selected Projects</h2>
+          </div>
+          <div class="work-controls">
+            <!-- Filter Pills -->
+            <div class="filter-group" role="tablist" aria-label="Filter works by category">
+              <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true">All (06)</button>
+              <button class="filter-btn" data-filter="design" role="tab" aria-selected="false">Design</button>
+              <button class="filter-btn" data-filter="development" role="tab" aria-selected="false">Engineering</button>
+              <button class="filter-btn" data-filter="system" role="tab" aria-selected="false">Systems</button>
+            </div>
+            <!-- View Switcher -->
+            <div class="view-toggle" aria-label="Switch layout view">
+              <button class="view-btn active" id="viewGridBtn" aria-label="Grid view" title="Grid View">
+                <svg viewBox="0 0 16 16" fill="currentColor"><path d="M1 1h6v6H1V1zm8 0h6v6H9V1zM1 9h6v6H1V9zm8 0h6v6H9V9z"/></svg>
+              </button>
+              <button class="view-btn" id="viewListBtn" aria-label="Index table view" title="Table View">
+                <svg viewBox="0 0 16 16" fill="currentColor"><path d="M1 2h14v2H1V2zm0 5h14v2H1V7zm0 5h14v2H1v-2z"/></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Work Grid View -->
+        <div class="projects-grid" id="projectsGrid">
+          
+          <!-- Project 01 -->
+          <article class="project-card" data-category="system development" data-id="monolith">
+            <div class="card-visual">
+              <div class="visual-blueprint blueprint-os">
+                <div class="bp-grid-pattern"></div>
+                <div class="bp-content">
+                  <div class="os-header">
+                    <span class="os-bullet"></span><span class="os-bullet"></span><span class="os-bullet"></span>
+                    <span class="os-title">MONOLITH.CORE // V3.2</span>
+                  </div>
+                  <div class="os-terminal">
+                    <p class="term-line">&gt; init --quiet --target=production</p>
+                    <p class="term-line text-muted">&gt; compiling 1,420 modules... [DONE 24ms]</p>
+                    <p class="term-line">&gt; latency: 0.12ms | memory: 8.4MB</p>
+                    <div class="term-matrix">
+                      <span>[01001101]</span><span>[01001111]</span><span>[01001110]</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card-overlay">
+                <span class="overlay-cta">INSPECT PROJECT ↗</span>
+              </div>
+            </div>
+            <div class="card-meta">
+              <div class="meta-top">
+                <span class="project-id">#01</span>
+                <span class="project-year">2026</span>
+              </div>
+              <h3 class="project-title">Monolith OS</h3>
+              <p class="project-tagline">Minimalist workspace kernel and developer environment engineered for friction-free focus.</p>
+              <div class="project-badges">
+                <span class="badge">TypeScript</span>
+                <span class="badge">Electron</span>
+                <span class="badge">Systems</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 02 -->
+          <article class="project-card" data-category="design" data-id="aethelgard">
+            <div class="card-visual">
+              <div class="visual-blueprint blueprint-arch">
+                <div class="bp-arch-shapes">
+                  <div class="shape-block-1"></div>
+                  <div class="shape-block-2"></div>
+                  <div class="shape-rule"></div>
+                  <div class="shape-annotation">ELEVATION 04 // 45.2°</div>
+                </div>
+              </div>
+              <div class="card-overlay">
+                <span class="overlay-cta">INSPECT PROJECT ↗</span>
+              </div>
+            </div>
+            <div class="card-meta">
+              <div class="meta-top">
+                <span class="project-id">#02</span>
+                <span class="project-year">2025</span>
+              </div>
+              <h3 class="project-title">Aethelgard Studio</h3>
+              <p class="project-tagline">Monochrome editorial archival catalogue for an avant-garde brutalist architecture firm in Zurich.</p>
+              <div class="project-badges">
+                <span class="badge">UI/UX</span>
+                <span class="badge">Typography</span>
+                <span class="badge">Next.js</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 03 -->
+          <article class="project-card" data-category="development system" data-id="kroma">
+            <div class="card-visual">
+              <div class="visual-blueprint blueprint-fin">
+                <div class="bp-chart-graph">
+                  <svg viewBox="0 0 300 120" class="graph-svg">
+                    <line x1="0" y1="30" x2="300" y2="30" stroke="currentColor" stroke-dasharray="3,3" stroke-width="0.75" />
+                    <line x1="0" y1="60" x2="300" y2="60" stroke="currentColor" stroke-dasharray="3,3" stroke-width="0.75" />
+                    <line x1="0" y1="90" x2="300" y2="90" stroke="currentColor" stroke-dasharray="3,3" stroke-width="0.75" />
+                    <polyline points="0,95 40,82 85,90 120,55 160,65 210,32 250,44 300,18" fill="none" stroke="currentColor" stroke-width="1.75" />
+                    <circle cx="210" cy="32" r="3" fill="currentColor" />
+                    <text x="218" y="32" fill="currentColor" font-size="8" font-family="monospace">HIGH +18.4%</text>
+                  </svg>
+                  <div class="graph-footer">
+                    <span>TICKER: KRO-USD</span>
+                    <span>SPREAD: 0.0001</span>
+                    <span>ORDERBOOK: SYNCED</span>
+                  </div>
+                </div>
+              </div>
+              <div class="card-overlay">
+                <span class="overlay-cta">INSPECT PROJECT ↗</span>
+              </div>
+            </div>
+            <div class="card-meta">
+              <div class="meta-top">
+                <span class="project-id">#03</span>
+                <span class="project-year">2025</span>
+              </div>
+              <h3 class="project-title">Kroma Liquidity Terminal</h3>
+              <p class="project-tagline">High-throughput institutional trading dashboard with sub-millisecond chart rendering and dark canvas styling.</p>
+              <div class="project-badges">
+                <span class="badge">WebSockets</span>
+                <span class="badge">WebGL</span>
+                <span class="badge">Fintech</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 04 -->
+          <article class="project-card" data-category="design system" data-id="forma">
+            <div class="card-visual">
+              <div class="visual-blueprint blueprint-industrial">
+                <div class="bp-circle-caliper">
+                  <div class="caliper-circle outer"></div>
+                  <div class="caliper-circle middle"></div>
+                  <div class="caliper-crosshair"></div>
+                  <div class="caliper-label">RADIUS: 120.00mm // TOLERANCE ±0.01</div>
+                </div>
+              </div>
+              <div class="card-overlay">
+                <span class="overlay-cta">INSPECT PROJECT ↗</span>
+              </div>
+            </div>
+            <div class="card-meta">
+              <div class="meta-top">
+                <span class="project-id">#04</span>
+                <span class="project-year">2024</span>
+              </div>
+              <h3 class="project-title">Studio Forma</h3>
+              <p class="project-tagline">Interactive tactile configurator and identity for high-precision physical computing hardware.</p>
+              <div class="project-badges">
+                <span class="badge">3D / WebGL</span>
+                <span class="badge">Product Design</span>
+                <span class="badge">Brand</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 05 -->
+          <article class="project-card" data-category="design" data-id="vesper">
+            <div class="card-visual">
+              <div class="visual-blueprint blueprint-editorial">
+                <div class="bp-editorial-page">
+                  <div class="editorial-col left">
+                    <span class="col-head">VOL. VIII</span>
+                    <div class="fake-text-row"></div>
+                    <div class="fake-text-row"></div>
+                    <div class="fake-text-row short"></div>
+                  </div>
+                  <div class="editorial-col right">
+                    <span class="col-title">THE QUIET INTERNET</span>
+                    <div class="fake-text-row"></div>
+                    <div class="fake-text-row"></div>
+                    <div class="fake-text-row"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="card-overlay">
+                <span class="overlay-cta">INSPECT PROJECT ↗</span>
+              </div>
+            </div>
+            <div class="card-meta">
+              <div class="meta-top">
+                <span class="project-id">#05</span>
+                <span class="project-year">2024</span>
+              </div>
+              <h3 class="project-title">Vesper Journal</h3>
+              <p class="project-tagline">Digital publishing platform exploring the philosophy of software, cybernetics, and typography.</p>
+              <div class="project-badges">
+                <span class="badge">Editorial</span>
+                <span class="badge">CSS Grid</span>
+                <span class="badge">Typography</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 06 -->
+          <article class="project-card" data-category="development system" data-id="nullobject">
+            <div class="card-visual">
+              <div class="visual-blueprint blueprint-code">
+                <div class="bp-code-canvas">
+                  <div class="code-flow-node">NODE_ROOT [0x00]</div>
+                  <div class="code-flow-connector">│</div>
+                  <div class="code-flow-branch">
+                    <div class="code-flow-node sub">BRANCH_A [DIFF]</div>
+                    <div class="code-flow-node sub">BRANCH_B [SYNC]</div>
+                  </div>
+                </div>
+              </div>
+              <div class="card-overlay">
+                <span class="overlay-cta">INSPECT PROJECT ↗</span>
+              </div>
+            </div>
+            <div class="card-meta">
+              <div class="meta-top">
+                <span class="project-id">#06</span>
+                <span class="project-year">2024</span>
+              </div>
+              <h3 class="project-title">Null Object Protocol</h3>
+              <p class="project-tagline">Open-source distributed state machine library designed for offline-first resilient architectures.</p>
+              <div class="project-badges">
+                <span class="badge">Rust</span>
+                <span class="badge">Wasm</span>
+                <span class="badge">Open Source</span>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Work Table / List View (Hidden by default, toggled via View Switcher) -->
+        <div class="projects-table-wrap" id="projectsTable" style="display: none;">
+          <table class="projects-table">
+            <thead>
+              <tr>
+                <th>NO.</th>
+                <th>PROJECT</th>
+                <th>CLIENT / DOMAIN</th>
+                <th>DISCIPLINE</th>
+                <th>YEAR</th>
+                <th>ACTION</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="table-row" data-id="monolith">
+                <td class="mono-meta">01</td>
+                <td><strong>Monolith OS</strong></td>
+                <td>Kernel Systems & Tools</td>
+                <td>Full-Stack Engineering</td>
+                <td>2026</td>
+                <td><button class="table-inspect-btn">INSPECT ↗</button></td>
+              </tr>
+              <tr class="table-row" data-id="aethelgard">
+                <td class="mono-meta">02</td>
+                <td><strong>Aethelgard Studio</strong></td>
+                <td>Architecture & Culture</td>
+                <td>Editorial UI/UX & Art Direction</td>
+                <td>2025</td>
+                <td><button class="table-inspect-btn">INSPECT ↗</button></td>
+              </tr>
+              <tr class="table-row" data-id="kroma">
+                <td class="mono-meta">03</td>
+                <td><strong>Kroma Liquidity Terminal</strong></td>
+                <td>Decentralized Finance</td>
+                <td>Data Visualization & React</td>
+                <td>2025</td>
+                <td><button class="table-inspect-btn">INSPECT ↗</button></td>
+              </tr>
+              <tr class="table-row" data-id="forma">
+                <td class="mono-meta">04</td>
+                <td><strong>Studio Forma</strong></td>
+                <td>Hardware & Robotics</td>
+                <td>WebGL Configurator & Branding</td>
+                <td>2024</td>
+                <td><button class="table-inspect-btn">INSPECT ↗</button></td>
+              </tr>
+              <tr class="table-row" data-id="vesper">
+                <td class="mono-meta">05</td>
+                <td><strong>Vesper Journal</strong></td>
+                <td>Independent Media</td>
+                <td>Editorial Design & CSS Engine</td>
+                <td>2024</td>
+                <td><button class="table-inspect-btn">INSPECT ↗</button></td>
+              </tr>
+              <tr class="table-row" data-id="nullobject">
+                <td class="mono-meta">06</td>
+                <td><strong>Null Object Protocol</strong></td>
+                <td>Distributed Systems</td>
+                <td>Rust, WebAssembly & Research</td>
+                <td>2024</td>
+                <td><button class="table-inspect-btn">INSPECT ↗</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Project Modal / Drawer -->
+    <div class="project-modal" id="projectModal" aria-hidden="true" role="dialog" aria-modal="true">
+      <div class="modal-backdrop" id="modalBackdrop"></div>
+      <div class="modal-dialog">
+        <div class="modal-header">
+          <div class="modal-nav-meta">
+            <span class="mono-meta" id="modalProjectIndex">PROJECT SPECIFICATION // #01</span>
+          </div>
+          <button class="btn-icon modal-close" id="modalCloseBtn" aria-label="Close project modal">
+            <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+        <div class="modal-body" id="modalBody">
+          <!-- Dynamic Content Injected via JS -->
+        </div>
+      </div>
+    </div>
+
+    <!-- About & Philosophy Section -->
+    <section class="section-about" id="about">
+      <div class="container">
+        <div class="about-grid">
+          
+          <div class="about-left">
+            <div class="section-title-wrap">
+              <span class="section-index">02 // PROFILE</span>
+              <h2 class="section-title">Design Philosophy</h2>
+            </div>
+            <div class="manifesto-card">
+              <blockquote class="manifesto-quote">
+                "Simplicity is not the absence of clutter; that's a consequence of simplicity. Simplicity is somehow essentially describing the purpose and place of an object."
+              </blockquote>
+              <cite class="manifesto-cite">— ON PURPOSE & REDUCTION</cite>
+            </div>
+            <div class="principles-list">
+              <div class="principle-item">
+                <span class="principle-num">I.</span>
+                <div class="principle-desc">
+                  <strong>Radical Clarity Over Decoration</strong>
+                  <p>Every element must earn its pixel. We eliminate extraneous ornament so the core message and purpose speak without friction.</p>
+                </div>
+              </div>
+              <div class="principle-item">
+                <span class="principle-num">II.</span>
+                <div class="principle-desc">
+                  <strong>Engineering as Craft</strong>
+                  <p>Writing performant, semantic, accessible code is not a secondary concern — it is an integral part of the aesthetic experience.</p>
+                </div>
+              </div>
+              <div class="principle-item">
+                <span class="principle-num">III.</span>
+                <div class="principle-desc">
+                  <strong>Timeless Monochromatism</strong>
+                  <p>Restricting color forces structure, hierarchy, spatial rhythm, and typography into absolute harmony.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-right">
+            <div class="profile-card">
+              <div class="profile-headshot-frame">
+                <!-- Abstract Architectural Portrait Representation in Crisp Monochrome SVG -->
+                <svg viewBox="0 0 400 320" class="profile-portrait-svg" aria-label="Marcelo minimalist portrait illustration">
+                  <rect width="400" height="320" fill="currentColor" fill-opacity="0.04" />
+                  <!-- Grid backdrop -->
+                  <line x1="0" y1="80" x2="400" y2="80" stroke="currentColor" stroke-opacity="0.1" stroke-width="1" />
+                  <line x1="0" y1="160" x2="400" y2="160" stroke="currentColor" stroke-opacity="0.1" stroke-width="1" />
+                  <line x1="0" y1="240" x2="400" y2="240" stroke="currentColor" stroke-opacity="0.1" stroke-width="1" />
+                  <line x1="100" y1="0" x2="100" y2="320" stroke="currentColor" stroke-opacity="0.1" stroke-width="1" />
+                  <line x1="200" y1="0" x2="200" y2="320" stroke="currentColor" stroke-opacity="0.1" stroke-width="1" />
+                  <line x1="300" y1="0" x2="300" y2="320" stroke="currentColor" stroke-opacity="0.1" stroke-width="1" />
+                  <!-- Stylized Geometry -->
+                  <circle cx="200" cy="140" r="60" fill="none" stroke="currentColor" stroke-width="1.5" />
+                  <path d="M 120 280 C 130 220, 270 220, 280 280" fill="none" stroke="currentColor" stroke-width="1.5" />
+                  <line x1="160" y1="135" x2="240" y2="135" stroke="currentColor" stroke-width="1.5" />
+                  <rect x="180" y="115" width="40" height="40" fill="currentColor" fill-opacity="0.15" />
+                  <text x="20" y="300" font-family="monospace" font-size="10" fill="currentColor" opacity="0.6">// SUBJECT: MARCELO.PROFILE</text>
+                  <text x="310" y="300" font-family="monospace" font-size="10" fill="currentColor" opacity="0.6">[VERIFIED]</text>
+                </svg>
+              </div>
+
+              <div class="bio-text">
+                <p>
+                  With over 8 years at the intersection of design systems and web engineering, I work with high-ambition founders, design studios, and engineering teams globally.
+                </p>
+                <p>
+                  My work spans bespoke brand identities, design tokens, responsive web applications, and web performance optimization.
+                </p>
+              </div>
+
+              <div class="competencies-block">
+                <h3 class="subhead-mono">CAPABILITIES & TOOLSET</h3>
+                <div class="competency-matrix">
+                  <div class="matrix-col">
+                    <span class="matrix-title">DESIGN</span>
+                    <ul>
+                      <li>Design Systems & Tokens</li>
+                      <li>Art Direction & Layout</li>
+                      <li>Typography & Grid Systems</li>
+                      <li>Interactive Prototyping</li>
+                      <li>User Research & Ergonomics</li>
+                    </ul>
+                  </div>
+                  <div class="matrix-col">
+                    <span class="matrix-title">ENGINEERING</span>
+                    <ul>
+                      <li>TypeScript & React / Next.js</li>
+                      <li>Semantic HTML5 & Vanilla CSS</li>
+                      <li>WebGL & Canvas Animation</li>
+                      <li>Node.js & Edge Functions</li>
+                      <li>Accessibility (WCAG AAA)</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience / Trajectory Section -->
+    <section class="section-experience" id="experience">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-title-wrap">
+            <span class="section-index">03 // CHRONOLOGY</span>
+            <h2 class="section-title">Career Trajectory</h2>
+          </div>
+          <div class="section-caption mono-meta">2018 — PRESENT DAY</div>
+        </div>
+
+        <div class="timeline-container">
+          <!-- Timeline Entry 01 -->
+          <div class="timeline-row">
+            <div class="t-year">2023 — PRESENT</div>
+            <div class="t-role">
+              <h3>Principal Designer & Technologist</h3>
+              <span class="t-company">Independent Practice // Global</span>
+            </div>
+            <div class="t-desc">
+              <p>Advising high-growth tech firms on design systems, ultra-fast web architectures, and minimalist brand experiences. Lead architecture on 14+ client initiatives.</p>
+            </div>
+            <div class="t-tags">
+              <span>Next.js</span>
+              <span>Design Tokens</span>
+              <span>Performance</span>
+            </div>
+          </div>
+
+          <!-- Timeline Entry 02 -->
+          <div class="timeline-row">
+            <div class="t-year">2021 — 2023</div>
+            <div class="t-role">
+              <h3>Senior Interface Engineer</h3>
+              <span class="t-company">Vanguard Systems // Tokyo</span>
+            </div>
+            <div class="t-desc">
+              <p>Orchestrated the front-end core of a real-time collaborative workspace. Reduced render latency by 42% and standardized multi-platform UI components.</p>
+            </div>
+            <div class="t-tags">
+              <span>TypeScript</span>
+              <span>Wasm</span>
+              <span>Architecture</span>
+            </div>
+          </div>
+
+          <!-- Timeline Entry 03 -->
+          <div class="timeline-row">
+            <div class="t-year">2019 — 2021</div>
+            <div class="t-role">
+              <h3>UI/UX & Creative Developer</h3>
+              <span class="t-company">Bureau K // Berlin & Remote</span>
+            </div>
+            <div class="t-desc">
+              <p>Crafted experimental web experiences and microsites for cultural institutions, contemporary art foundations, and architecture practices.</p>
+            </div>
+            <div class="t-tags">
+              <span>Three.js</span>
+              <span>Art Direction</span>
+              <span>CSS Architecture</span>
+            </div>
+          </div>
+
+          <!-- Timeline Entry 04 -->
+          <div class="timeline-row">
+            <div class="t-year">2018 — 2019</div>
+            <div class="t-role">
+              <h3>Interactive Design Fellow</h3>
+              <span class="t-company">Atelier Forma</span>
+            </div>
+            <div class="t-desc">
+              <p>Conducted research on tactile interfaces, typography for screen reading ergonomics, and generative SVG drawing engines.</p>
+            </div>
+            <div class="t-tags">
+              <span>Creative Coding</span>
+              <span>Typography</span>
+              <span>SVG</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Published Notes / Writing Section -->
+    <section class="section-writing" id="writing">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-title-wrap">
+            <span class="section-index">04 // DISPATCHES</span>
+            <h2 class="section-title">Published Notes</h2>
+          </div>
+          <div class="section-caption mono-meta">THOUGHTS ON CRAFT & REDUCTION</div>
+        </div>
+
+        <div class="articles-grid">
+          <!-- Article 01 -->
+          <article class="article-card">
+            <div class="article-meta">
+              <span class="article-date">OCTOBER 2025</span>
+              <span class="article-readtime">5 MIN READ</span>
+            </div>
+            <h3 class="article-title">
+              <a href="#writing" class="article-link">The Quiet Web: On Digital Restraint and Sensory Overload</a>
+            </h3>
+            <p class="article-summary">
+              Why the future of software interface design belongs to low-stimulation, monochromatic, and deeply intentional computing environments.
+            </p>
+            <div class="article-footer">
+              <span class="article-tag">#ESSAY</span>
+              <span class="article-arrow">READ ESSAY ↗</span>
+            </div>
+          </article>
+
+          <!-- Article 02 -->
+          <article class="article-card">
+            <div class="article-meta">
+              <span class="article-date">JULY 2025</span>
+              <span class="article-readtime">8 MIN READ</span>
+            </div>
+            <h3 class="article-title">
+              <a href="#writing" class="article-link">Sub-Millisecond Interfaces: Zero Runtime CSS at Scale</a>
+            </h3>
+            <p class="article-summary">
+              A pragmatic methodology for engineering large-scale enterprise design systems with modern vanilla CSS cascade layers and custom properties.
+            </p>
+            <div class="article-footer">
+              <span class="article-tag">#ENGINEERING</span>
+              <span class="article-arrow">READ ESSAY ↗</span>
+            </div>
+          </article>
+
+          <!-- Article 03 -->
+          <article class="article-card">
+            <div class="article-meta">
+              <span class="article-date">MARCH 2025</span>
+              <span class="article-readtime">4 MIN READ</span>
+            </div>
+            <h3 class="article-title">
+              <a href="#writing" class="article-link">Swiss Grids in the Age of Dynamic Aspect Ratios</a>
+            </h3>
+            <p class="article-summary">
+              Reconciling Josef Müller-Brockmann's rigorous typographic grids with modern responsive breakpoints and container queries.
+            </p>
+            <div class="article-footer">
+              <span class="article-tag">#TYPOGRAPHY</span>
+              <span class="article-arrow">READ ESSAY ↗</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact & Collaboration Section -->
+    <section class="section-contact" id="contact">
+      <div class="container">
+        <div class="contact-card">
+          <div class="contact-header">
+            <div class="section-title-wrap">
+              <span class="section-index">05 // INITIATE</span>
+              <h2 class="contact-title">Let’s construct something timeless.</h2>
+            </div>
+            <p class="contact-lead">
+              Currently reviewing inquiries for Q3/Q4. Whether you're building a new product from zero or refining an existing flagship platform, I’d love to hear from you.
+            </p>
+          </div>
+
+          <div class="contact-content-grid">
+            <!-- Left Info Block -->
+            <div class="contact-info">
+              <div class="info-group">
+                <span class="info-label">DIRECT CHANNEL</span>
+                <div class="copy-email-box">
+                  <span class="email-text" id="emailToCopy">hello@marcelo.design</span>
+                  <button class="btn-copy" id="copyEmailBtn" aria-label="Copy email address" title="Copy to clipboard">
+                    <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" fill="none" stroke-width="2">
+                      <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                      <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                    <span class="copy-text">COPY</span>
+                  </button>
+                </div>
+              </div>
+
+              <div class="info-group">
+                <span class="info-label">LOCATION & CADENCE</span>
+                <p class="info-val">Tokyo / UTC+08:00 — Remote globally</p>
+                <p class="info-sub">Synchronous & asynchronous collaboration workflows</p>
+              </div>
+
+              <div class="info-group">
+                <span class="info-label">NETWORK IDENTIFIERS</span>
+                <ul class="social-links-list">
+                  <li><a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-link">GitHub ↗</a></li>
+                  <li><a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-link">LinkedIn ↗</a></li>
+                  <li><a href="https://x.com" target="_blank" rel="noopener noreferrer" class="social-link">X (Twitter) ↗</a></li>
+                  <li><a href="https://read.cv" target="_blank" rel="noopener noreferrer" class="social-link">Read.cv ↗</a></li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Right Form Block -->
+            <div class="contact-form-wrap">
+              <form class="contact-form" id="contactForm" novalidate>
+                <div class="form-row">
+                  <div class="form-field">
+                    <label for="formName" class="field-label">NAME / ORGANIZATION *</label>
+                    <input type="text" id="formName" name="name" class="field-input" placeholder="e.g. Jane Doe or Acme Corp" required>
+                    <span class="field-error" id="nameError"></span>
+                  </div>
+                  <div class="form-field">
+                    <label for="formEmail" class="field-label">ELECTRONIC MAIL *</label>
+                    <input type="email" id="formEmail" name="email" class="field-input" placeholder="jane@example.com" required>
+                    <span class="field-error" id="emailError"></span>
+                  </div>
+                </div>
+
+                <div class="form-field">
+                  <label class="field-label">PROJECT SCOPE</label>
+                  <div class="scope-checkboxes">
+                    <label class="scope-pill">
+                      <input type="checkbox" name="scope" value="Product Design">
+                      <span>Product Design</span>
+                    </label>
+                    <label class="scope-pill">
+                      <input type="checkbox" name="scope" value="Frontend Architecture">
+                      <span>Engineering</span>
+                    </label>
+                    <label class="scope-pill">
+                      <input type="checkbox" name="scope" value="Design Systems">
+                      <span>Design System</span>
+                    </label>
+                    <label class="scope-pill">
+                      <input type="checkbox" name="scope" value="Art Direction">
+                      <span>Art Direction</span>
+                    </label>
+                  </div>
+                </div>
+
+                <div class="form-field">
+                  <label for="formMessage" class="field-label">MESSAGE / BRIEF *</label>
+                  <textarea id="formMessage" name="message" class="field-textarea" rows="4" placeholder="Tell me about your timeline, challenge, or vision..." required></textarea>
+                  <span class="field-error" id="messageError"></span>
+                </div>
+
+                <div class="form-actions">
+                  <button type="submit" class="btn btn-primary btn-submit" id="submitBtn">
+                    <span class="btn-text">TRANSMIT INQUIRY</span>
+                    <svg class="btn-arrow" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5">
+                      <path d="M3 8h10M9 4l4 4-4 4"/>
+                    </svg>
+                  </button>
+                  <div class="form-status" id="formStatus" aria-live="polite"></div>
+                </div>
+              </form>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Site Footer / Colophon -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <div class="footer-colophon">
+        <div class="colophon-item">
+          <span class="colophon-title">INDEX</span>
+          <p>© 2026 MARCELO. ALL RIGHTS RESERVED.</p>
+        </div>
+        <div class="colophon-item">
+          <span class="colophon-title">TYPOGRAPHY</span>
+          <p>Space Grotesk, Inter & JetBrains Mono</p>
+        </div>
+        <div class="colophon-item">
+          <span class="colophon-title">CODEBASE</span>
+          <p>Clean Semantic Vanilla HTML5, Modern CSS & JS</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="mono-meta">BUILT WITH INTENTIONAL RESTRAINT</div>
+        <a href="#hero" class="back-to-top" id="backToTopBtn">
+          <span>TOP</span>
+          <svg viewBox="0 0 16 16" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M8 13V3M3 8l5-5 5 5"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast Notification element -->
+  <div class="toast" id="toast" role="status" aria-live="polite">
+    <span class="toast-message" id="toastMessage"></span>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
